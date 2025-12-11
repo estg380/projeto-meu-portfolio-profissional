@@ -1,0 +1,149 @@
+/* CONFIGURAÇOES GLOBAIS BASICAS*/
+{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial,sans-serif;
+    background-color: #0d0d0d; /*Fundo muito escuro*/
+    color: #fff; /*texto em branco*/
+    line-height: 1.6;
+}
+
+.container {
+    width: 90;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*NAVEGAÇÃO*/
+#header {
+    background-color: rgba(0,0,0,0,9); /*Fundo semi transparente para destaque*/
+    position: fixed; /*posição fixa no topo*/
+    width: 100%;
+    top: 0;
+    z-index:1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    color: #00bcd4; /*cor de destaque*/
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#navbar ul li a {
+    color: #ccc;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 0.9em;
+    transition: color 0.3s;
+    text-transform: uppercase;
+}
+
+#navbar ul li a:hover {
+    color:#fff;
+}
+
+/*file:///C:/Users/familia/OneDrive/Desktop/web/img/dados.jpg*/
+/*http://picsum.photos/1600/900?random=1*/
+/*file:///C:/Users/familia/OneDrive/Desktop/web/img/dados2.jpg*/
+/*SEÇÃO PRINCIPAL (HEROI) FUNDO ESCURO COM EFEITO GRAFICO*/
+#hero {
+    /*fundo escuro e efeito grafico e troca da imagem*/
+    background: url('file:///C:/Users/familia/OneDrive/Desktop/web/img/dados.jpg') no-repeat center center/cover; /*Exemplo de imagem*/
+    position: relative;
+    height: 100vh; /*ocupa a altura total da tela*/
+    display: flex;
+    align-items: center;
+    padding-top: 60px; /*Espaço para o header fixo*/
+
+}
+
+/*Para escurecer a imagem do fundo*/
+#here::before{
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.7); /*escurece a imagem e da um efeito gradiente sutiu*/
+    background: linear-gradient(135deg,rgba(0,50,80,0.5)0%, rgba(0,0,0,0.8)50%,rgba(50,0,80,0.5)100%);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;/*garante que o conteudo fique acima do overlay*/
+}
+
+.wecome-box {
+    /*alinhamento a direita ou ajusta a esquerda*/
+    margin-left: 50%;
+    padding: 20px;
+    background-color: rgba(0,0,0,0.5); /*fundo semi-tranparente para destacar o texto*/
+    border-radius: 8px;
+}
+
+.greeting {
+    font-size: 1.2em;
+    color:#00bcd4;
+    margin-bottom: 5px;
+}
+
+#hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color:#fff;
+}
+
+.role {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    color:#eee;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 1.5em;
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color:#00bcd4;
+}
+
+/*SEÇÕES DE CONTEUDO RESUMO,FORMÇÃO ETC...*/
+.content-section {
+    padding: 80px;
+    border-top:1px solid #222;
+}
+
+.content-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #00bcd4;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.content-section ul {
+    list-style: disc;
+    margin-left: 20px;
+    margin-top: 15px;
+    color:#ccc;
+}
+
