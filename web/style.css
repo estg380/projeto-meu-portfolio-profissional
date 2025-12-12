@@ -7,7 +7,7 @@
 
 body {
     font-family: Arial,sans-serif;
-    background-color: #0d0d0d; /*Fundo muito escuro*/
+    background-color: #222d; /*Fundo muito escuro*/
     color: #fff; /*texto em branco*/
     line-height: 1.6;
 }
@@ -145,5 +145,160 @@ body {
     margin-left: 20px;
     margin-top: 15px;
     color:#ccc;
+}
+
+/* ESTILODA SEÇÃO FORMAÇÃO- TIMELINE*/
+.timeline {
+    position: relative;
+    max-width: 900px; /*largura maxima para a timeline*/
+    margin:0 auto;
+    padding-left: 20px;
+}
+
+/*linha vertical central(efeito visual de linha do tempo)*/
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: #333;/*cor a linha*/
+    top:0;
+    bottom: 0;
+    left: 20px; /* conteudo com posição a esquerda*/
+    margin-left: -3px;
+}
+
+.timeline-item {
+    padding:10px 0;
+    position: relative;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: flex-start; /*alinha a logo e o cnteudo no top*/
+}
+
+/*logo da instituição*/
+.timeline-logo {
+    width: 50px; /*largura do icone da logo*/
+    height: 50%;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+    background-color: #fff; /*fundo branco para as logos*/
+    flex-shrink: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timeline-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /*Garante que a logo caiba no lugar certo*/
+    padding: 5px;
+}
+
+/*conteudo da formação,ano e descrição*/
+.timeline-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.timeline-content.year {
+    color: #00bcd4; /*cor de destaque para o ano*/
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.description-box {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px;
+}
+
+.indicator {
+    color: #00bcd4;
+    font-size: 1.2em;
+    margin-right: 10px;
+    line-height: 1.2;
+}
+
+.details {
+    flex-grow: 1;
+}
+
+.course-title {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+.institution {
+    font-size: 0.9em;
+    color: #aaa;
+}
+
+/*ESTILO DA SEÇAO HABILIDADES*/
+.skills-grid {
+    display: grid;/* 4 colunas em telas grandes*/
+    grid-template-columns: repeat(4,1fr);
+    gap:15px; /*espaçamento entre os cards*/
+    margin-top: 30px;
+}
+
+.skill-card {
+    background-color: #222; /*fundo mais escuro*/
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #fff;
+    transition: transform 0.3s ease box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #333; /*borda sutil*/
+}
+
+/*efeito hover ao passar o mouse*/
+.skill-card:hover {
+    transform: translate(-5px); /*eleva o card*/
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5); /*sombra um pouco mas visivel*/
+    border-color: #00bcd4;
+}
+
+/*icone sutil no canto superior direito*/
+.skill-card::after {
+    content: '\2713'; /*codigo para um checkmark*/
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px 10px;
+    font-size: 1.2em;
+    color: rgba(0,188,212,0.5); /*cor de temas com opacidade*/
+    font-weight: bold;
+}
+
+/*RESPONSIVIDADE PARA TELAS MENORES*/
+@media (max-width: 992px) {
+    /*3 colunas em tablets*/
+    .skill-grid{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+@media(max-width:768px) {
+    /* 2 colunas em telas menores que tablets*/
+    .skill-grid{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (max-width:576px) {
+    /* 1 coluna para tela de smartphones*/
+    skill-grid {
+        grid: template columns 1fr;
+    }
 }
 
