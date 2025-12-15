@@ -61,12 +61,12 @@ body {
 /*SEÇÃO PRINCIPAL (HEROI) FUNDO ESCURO COM EFEITO GRAFICO*/
 #hero {
     /*fundo escuro e efeito grafico e troca da imagem*/
-    background: url('file:///C:/Users/familia/OneDrive/Desktop/web/img/dados.jpg') no-repeat center center/cover; /*Exemplo de imagem*/
+    background: url('file:///C:/Users/SRCORREIA/OneDrive/%C3%81rea%20de%20Trabalho/portfolio/img/dado.jpg') no-repeat center center/cover; /*Exemplo de imagem*/
     position: relative;
     height: 100vh; /*ocupa a altura total da tela*/
     display: flex;
     align-items: center;
-    padding-top: 60px; /*Espaço para o header fixo*/
+    padding-top: 70px; /*Espaço para o header fixo*/
 
 }
 
@@ -301,4 +301,42 @@ body {
         grid: template columns 1fr;
     }
 }
+
+/*ESTILO DA SEÇÃO PORTFOLIO*/
+.subsection-title {
+    font-size: 1.5em;
+    color: #00bcd4; /*cor de destaque*/
+    margin-top: -10px;
+    margin-bottom: 5px;
+}
+
+.section-instruction {
+    font-size: italic;
+    color:#ccc;
+    margin-bottom: 40px;
+}
+
+.portfolio-grid {
+    display: grid;
+    /*defini 5 colunas para telas grandes*/
+    grid-template-columns: repeat(5,1fr);
+    gap:15px; /*espaçamento entre os itens*/
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    display: block; /*para garantir que o link ocupe espaço*/
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.4s ease-out; /*leve zoom na imagem*/
+}
+
 
