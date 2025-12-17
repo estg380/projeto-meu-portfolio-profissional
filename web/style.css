@@ -48,33 +48,43 @@ body {
 }
 
 #navbar ul li a {
-    color: #ccc;
+    justify-content: center;
+    color: #fff;
     text-decoration: none;
     padding: 10px 15px;
     font-size: 0.9em;
     transition: color 0.3s;
     text-transform: uppercase;
+    display: inline-block;
+}
+
+#navbar ul {
+    display: flex; /*coloca os itens lado a lado*/
+    justify-content: center; /*centraliza o menu horizontalmente*/
+    list-style:none; 
+    margin: 0;
+    padding: 0;
+    gap:15px /*cria espaço entre os itens*/
 }
 
 #navbar ul li a:hover {
     color: #fff;
 }
 
-/*file:///C:/Users/familia/OneDrive/Desktop/web/img/dados.jpg*/
-/*http://picsum.photos/1600/900?random=1*/
-/*file:///C:/Users/familia/OneDrive/Desktop/web/img/dados2.jpg*/
+
 /*SEÇÃO PRINCIPAL (HEROI) FUNDO ESCURO COM EFEITO GRAFICO*/
 #hero {
     /*fundo escuro e efeito grafico e troca da imagem*/
-    background: url('file:///C:/Users/SRCORREIA/OneDrive/%C3%81rea%20de%20Trabalho/portfolio/img/dado.jpg') no-repeat center center/cover;
+    background: url('file:///C:/Users/SRCORREIA/OneDrive/%C3%81rea%20de%20Trabalho/web/img/bd.jpg') no-repeat center center/cover;
     /*Exemplo de imagem*/
     position: relative;
-    height: 100vh;
+    height: 75vh;
     /*ocupa a altura total da tela*/
     display: flex;
     align-items: center;
-    padding-top: 70px;
+    padding-top: 50px;
     /*Espaço para o header fixo*/
+    margin: 0;
 
 }
 
@@ -118,6 +128,7 @@ body {
     font-size: 2.5em;
     margin-bottom: 10px;
     color: #fff;
+    border-style: #101010;
 }
 
 .role {
@@ -150,6 +161,7 @@ body {
     display: inline-block;
     padding-bottom: 5px;
 }
+
 
 .content-section ul {
     list-style: disc;
@@ -636,3 +648,4 @@ body {
         margin-bottom: 15px;
     }
 }
+
