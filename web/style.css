@@ -7,9 +7,9 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #222d;
+    background-color: #fff;
     /*Fundo muito escuro*/
-    color: #fff;
+    color: #222d;
     /*texto em branco*/
     line-height: 1.6;
 }
@@ -49,7 +49,7 @@ body {
 
 #navbar ul li a {
     justify-content: center;
-    color: #fff;
+    color: #080000;
     text-decoration: none;
     padding: 10px 15px;
     font-size: 0.9em;
@@ -68,7 +68,7 @@ body {
 }
 
 #navbar ul li a:hover {
-    color: #fff;
+    color: #00bcd4;
 }
 
 
@@ -127,18 +127,18 @@ body {
 #hero h1 {
     font-size: 2.5em;
     margin-bottom: 10px;
-    color: #fff;
+    color: #00bcd4;
     border-style: #101010;
 }
 
 .role {
     font-size: 1.1em;
     margin-bottom: 5px;
-    color: #eee;
+    color: #101010;
 }
 
 .social-links a {
-    color: #fff;
+    color: #101010;
     font-size: 1.5em;
     margin-right: 15px;
     transition: color 0.3s;
@@ -167,7 +167,7 @@ body {
     list-style: disc;
     margin-left: 20px;
     margin-top: 15px;
-    color: #ccc;
+    color: #101010;
 }
 
 /* ESTILODA SEÇÃO FORMAÇÃO- TIMELINE*/
@@ -204,9 +204,9 @@ body {
 
 /*logo da instituição*/
 .timeline-logo {
-    width: 50px;
+    width: 100px;
     /*largura do icone da logo*/
-    height: 50%;
+    height: 100%;
     border-radius: 50%;
     overflow: hidden;
     position: relative;
@@ -250,25 +250,105 @@ body {
 
 .indicator {
     color: #00bcd4;
+    width: 2%;
+    height: 2%;
     font-size: 1.2em;
     margin-right: 10px;
     line-height: 1.2;
 }
 
+.indicator-img {
+    width: 10%;
+    height: 10%;
+}
 .details {
     flex-grow: 1;
+    color:#00a0b8;
 }
 
+.year {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #1a1a1a;
+}
 .course-title {
-    font-size: 1.1em;
+    font-size: 1.2em;
     font-weight: bold;
     margin-bottom: 2px;
+
+}
+
+.formato{
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 2px;
+    color: chocolate;
 }
 
 .institution {
-    font-size: 0.9em;
-    color: #aaa;
+    font-size: 1.2em;
+    color: #080000;
+    font-weight: bold;
+    margin-bottom: 2px;
+
 }
+
+/* ESTILO SEÇÃO DE CURSOS*/
+
+.timeline-cursos{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:15px; 
+    grid-template-rows: auto 1fr auto;
+    margin-top: 30px;
+    max-width: 900px;
+    /*largura maxima para a timeline*/
+    margin: 0 auto;
+    padding-left: 20px;
+}
+
+.curso-grid{
+    background-color: #00bbd43b;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    display: flex; /*modo flexivel*/
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.topicos li{
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.timeline-logo-cursos img {
+    width: 47%;
+    height: 47%;
+    object-fit: contain;
+    /*Garante que a logo caiba no lugar certo*/
+    padding: 5px;
+}
+
+.description-box-curso{
+    display: flex;
+    align-items: flex-start;
+    padding: 10px;
+}
+.details-cursos{
+    display: block; /*tranforma o span em um elemento de bloco*/
+    flex-grow: 3;
+    /*flex-direction: column; /*empilha os itens verticalmente*/
+    /*align-items: flex-start; /*alinha os elementos a esquerda*/
+    margin-bottom: 10px;
+    color:#00a0b8;
+}
+
+.course-title-curso{
+    color: #0d0d0d;
+    
+}
+
 
 /*ESTILO DA SEÇAO HABILIDADES*/
 .skills-grid {
